@@ -13,7 +13,8 @@ const messages = [];
 console.log(messages)
 document.addEventListener("DOMContentLoaded", () =>{
     ComfyJS.onChat = (user, message, flags, self, extra) => {
-        updateChat(`${user}-${message}`)
+        console.log(user)
+        updateChat(`${user}:  ${message}`)
         
     }
     
@@ -27,7 +28,7 @@ const updateChat = (x) => {
     
     messages.push(x)
     console.log(messages)
-    if (messages.length >10){
+    if (messages.length >15){
         messages.shift();
         const toDelete = messageElement.firstChild
         messageElement.removeChild(toDelete)
