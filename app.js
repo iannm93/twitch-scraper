@@ -2,6 +2,7 @@ require("dotenv").config();
 const request = require('request');
 
 
+const tmi = require('tmi.js');
 const client = new tmi.Client({
 	options: { debug: true },
 	identity: {
@@ -11,4 +12,15 @@ const client = new tmi.Client({
 	channels: [ 'ianm93__']
 });
 
-const tmi = require('tmi.js');
+client.connect();
+
+client.on('message', (channel, tags, message, self) => {
+    if(self) return;
+   if (message === "test"){
+
+    console.log(channel)
+   
+    }
+	// Ignore echoed messages.
+console.log(channel, tags, message, self)
+});
