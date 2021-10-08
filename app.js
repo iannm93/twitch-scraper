@@ -1,5 +1,13 @@
 const messageElement = document.getElementById("messages");
+const userChat = document.getElementById("form");
+const userText = document.getElementById("text")
+userChat.addEventListener("click", findChat)
 
+function findChat(event){
+    event.preventDefault()
+    ComfyJS.Init(userText.value);
+    
+}
 
 const messages = [];
 console.log(messages)
@@ -10,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     }
     
     
-    ComfyJS.Init("ianm93__");
+    // ComfyJS.Init("ianm93__");
     
     
 })
