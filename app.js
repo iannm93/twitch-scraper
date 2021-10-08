@@ -20,8 +20,8 @@ const updateChat = (x) => {
     messages.push(x)
     console.log(messages)
     if (messages.length >10){
-        messages.unshift();
-        const toDelete = messageElement.lastChild
+        messages.shift();
+        const toDelete = messageElement.firstChild
         messageElement.removeChild(toDelete)
 
     }
