@@ -19,7 +19,7 @@ This is a basic browser web-page that takes a user input from a search bar and u
 There is no installation needed
 
 ## Code Examples
-    ```
+```
     const updateChat = (x) => {
     
     messages.push(x)
@@ -34,7 +34,7 @@ There is no installation needed
     list.innerText = x;
     messageElement.appendChild(list)
 
-}
+    }
 ```
 Defining the function that is used to append each individual chat message to the dom, and store its value in an array. This function also empties out the first (0) index of the array when it reaches a length of 15, and removes the first index from the dom.
 
