@@ -18,10 +18,10 @@ ComfyJS.Init(process.env.USERNAME_ID, process.env.CHAT_TOKEN);
 const client = new tmi.Client({
 	options: { debug: true },
 	identity: {
-		username: 'ianm93__',
+		username: process.env.USERNAME_ID,
 		password: process.env.CHAT_TOKEN
 	},
-	channels: [ 'ianm93__']
+	channels: [process.env.USERNAME_ID]
 });
 
 client.connect();

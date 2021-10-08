@@ -1,5 +1,5 @@
 ## Chat extension browser
-> The twitch.tv chatextender
+> The twitch.tv chat extender
 
 ## Table of contents
 * [General info](#general-info)
