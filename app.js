@@ -1,15 +1,26 @@
+const messageElement = document.getElementById("messages");
 
 
+const messages = [];
+console.log(messages)
 document.addEventListener("DOMContentLoaded", () =>{
-    ComfyJS.onCommand = ( user, command, message, flags, extra ) => {
-        console.log(flags.broadcaster)
+    ComfyJS.onChat = (user, message, flags, self, extra) => {
+        updateChat(message)
+        
+    }
     
-        if(flags.broadcaster && command === "test" ) {
-          console.log("response")
-        }
-      }
-      ComfyJS.Init("ianm93__");
-
+    
+    ComfyJS.Init("ianm93__");
+    
     
 })
 
+const updateChat = (x) => {
+    
+    messages.push(x)
+    console.log(messages)
+    const list = document.createElement("li")
+    list.innerText = x;
+    messageElement.appendChild(list)
+
+}
